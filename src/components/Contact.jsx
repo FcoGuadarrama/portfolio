@@ -14,7 +14,8 @@ export default function Contact() {
                     </p>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '64px' }} className="contact-grid">
+                {/* <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '64px' }} className="contact-grid">*/}
+                <div className="contact-grid">
                     {/* Contact Info */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -56,7 +57,7 @@ export default function Contact() {
                         </div>
                     </motion.div>
 
-                    {/* Contact Form */}
+                    {/* Contact Form 
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -108,7 +109,7 @@ export default function Contact() {
                                 </button>
                             </form>
                         </div>
-                    </motion.div>
+                    </motion.div>*/}
                 </div>
             </div>
             <style>{`
