@@ -34,33 +34,33 @@
   "experience": {
     "label": "Trajectory",
     "title": "Experience",
-    "subtitle": "Over 5 years building robust solutions for various industries.",
-    "role1": "Senior Full Stack Developer",
-    "period1": "2022 - Present",
-    "desc1": "Led the modernization of legacy government systems, implementing scalable REST APIs and modern frontend architectures. Mentored junior developers and improved CI/CD pipelines.",
-    "role2": "Full Stack Developer",
-    "period2": "2020 - 2022",
-    "desc2": "Developed enterprise solutions for consulting clients, integrating cloud services and optimizing database performance. Collaborated with cross-functional teams to deliver projects on time.",
-    "role3": "Web Developer",
-    "period3": "2018 - 2020",
-    "desc3": "Built and maintained web applications for creative agencies, focusing on UI/UX and backend reliability. Automated deployment processes and enhanced system security.",
+    "subtitle": "Over 5 years building and optimizing enterprise applications.",
+    "role1": "Full-Stack Web Developer | CAPI Software",
+    "period1": "Aug 2023 - Present",
+    "desc1": "Maintaining and modernizing a real estate CRM system, resolving bugs and refactoring legacy code using Laravel and Angular. Implemented modern best practices and built a Node.js microservice for Meta lead capture integration. Working with Azure and CI/CD pipelines.",
+    "role2": "Full-Stack Web Developer | One Way Consulting",
+    "period2": "Jan 2023 - Aug 2023",
+    "desc2": "Developed a point-of-sale system integrated with the SAP Business One SDK. Upgraded legacy code to modern framework versions and applied best practices. Worked with Laravel, Angular, Yii2, Docker, and AWS services (EC2, S3).",
+    "role3": "Full-Stack Web Developer | Narrative Studio",
+    "period3": "Aug 2021 - Jan 2023",
+    "desc3": "Developed executive dashboards and reporting tools integrated with SAP systems. Backend development with Laravel and Node.js, frontend with React. Implemented Docker containerization for deployment workflows.",
     "remote": "Remote"
   },
   "projects": {
     "label": "Portfolio",
     "title": "Projects",
-    "subtitle": "Government and business impact solutions developed with best practices.",
+    "subtitle": "Projects developed for federal institutions in climate-related initiatives.",
     "project1": {
-      "title": "Government Data Platform",
-      "organization": "CAPI Software",
-      "period": "2022 - Present",
-      "description": "A scalable platform for managing and visualizing government data, featuring real-time analytics and secure access controls."
+      "title": "National Climate Financing Platform",
+      "organization": "SHCP",
+      "period": "Nov 2020 - Jun 2021",
+      "description": "Contributed to the development of a web-based tool to identify supply and demand for climate financing supporting adaptation and mitigation programs in Mexico, aligned with the Paris Agreement. Technologies: Laravel, Angular, MySQL, REST APIs."
     },
     "project2": {
-      "title": "Enterprise Resource Planner",
-      "organization": "One Way Consulting",
-      "period": "2020 - 2022",
-      "description": "ERP system for business process automation, integrating inventory, HR, and finance modules with modern UI."
+      "title": "Climate Action Identification and Quantification System",
+      "organization": "SEMARNAT",
+      "period": "Jan 2020 - Oct 2020",
+      "description": "Contributed to the development of a system for the integration of the Climate Change Cross-Cutting Annex. Backend built in Laravel and frontend in Angular. Addressed large datasets, complex mathematical formulas, and advanced validation logic. Published in the Official Gazette of the Federation (siatsubnacional.semarnat.gob.mx)."
     }
   },
   "skills": {
