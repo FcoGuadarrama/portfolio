@@ -1,0 +1,119 @@
+{
+  "navbar": {
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "subtitle": "Bienvenido a mi portafolio"
+  },
+  "about": {
+    "label": "Conóceme",
+    "title": "Sobre mí",
+    "subtitle": "Un desarrollador apasionado por crear soluciones robustas y elegantes.",
+    "innovation": "Impulsando la innovación a través del",
+    "code": "código",
+    "description1": "Soy Francisco Guadarrama, Ingeniero en Sistemas Computacionales con una trayectoria de más de 5 años en el desarrollo web full-stack. Mi enfoque se centra en la creación, mantenimiento y optimización de aplicaciones empresariales de gran escala.",
+    "description2": "Especializado en modernizar sistemas legacy y construir nuevas soluciones robustas, domino tanto el backend (Laravel, Node.js) como el frontend moderno (React, Angular). Me apasiona el código limpio, la escalabilidad y ayudar a los equipos a alcanzar objetivos tecnológicos ambiciosos.",
+    "stats": {
+      "years": "Años de experiencia",
+      "companies": "Empresas",
+      "projects": "Proyectos",
+      "technologies": "Tecnologías"
+    },
+    "backendExpert": "Experto Backend",
+    "backendStack": "Laravel, PHP, SQL",
+    "frontendSpecialist": "Especialista Frontend",
+    "frontendStack": "React, Vue, Tailwind",
+    "databaseCloud": "Base de datos y Nube",
+    "databaseStack": "MySQL, AWS, Docker"
+  },
+  "experience": {
+    "label": "Trayectoria",
+    "title": "Experiencia",
+    "subtitle": "Más de 5 años construyendo soluciones robustas para diversas industrias.",
+    "role1": "Desarrollador Full Stack Senior",
+    "period1": "2022 - Presente",
+    "desc1": "Lideré la modernización de sistemas gubernamentales legacy, implementando APIs REST escalables y arquitecturas frontend modernas. Mentor de desarrolladores junior y mejoras en pipelines CI/CD.",
+    "role2": "Desarrollador Full Stack",
+    "period2": "2020 - 2022",
+    "desc2": "Desarrollé soluciones empresariales para clientes de consultoría, integrando servicios en la nube y optimizando el rendimiento de bases de datos. Colaboré con equipos multidisciplinarios para entregar proyectos a tiempo.",
+    "role3": "Desarrollador Web",
+    "period3": "2018 - 2020",
+    "desc3": "Construí y mantuve aplicaciones web para agencias creativas, enfocándome en UI/UX y confiabilidad backend. Automatización de despliegues y mejora de la seguridad del sistema.",
+    "remote": "Remoto"
+  },
+  "projects": {
+    "label": "Portafolio",
+    "title": "Proyectos",
+    "subtitle": "Soluciones de impacto gubernamental y empresarial desarrolladas con las mejores prácticas.",
+    "project1": {
+      "title": "Plataforma de Datos Gubernamentales",
+      "organization": "CAPI Software",
+      "period": "2022 - Presente",
+      "description": "Plataforma escalable para gestión y visualización de datos gubernamentales, con analítica en tiempo real y controles de acceso seguros."
+    },
+    "project2": {
+      "title": "Planificador de Recursos Empresariales",
+      "organization": "One Way Consulting",
+      "period": "2020 - 2022",
+      "description": "Sistema ERP para automatización de procesos empresariales, integrando inventario, RRHH y finanzas con una interfaz moderna."
+    }
+  },
+  "skills": {
+    "label": "Mi Arsenal",
+    "title": "Habilidades",
+    "subtitle": "Un conjunto de herramientas moderno y diversificado para construir el futuro de la web.",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "databases": "Bases de datos",
+    "devops": "DevOps",
+    "ai": "IA y Agentes",
+    "php": "PHP / Laravel / Yii2 / C#",
+    "node": "Node.js",
+    "ci_yii": "CodeIgniter / Yii2",
+    "csharp": "C#",
+    "react": "React.js",
+    "angular": "Angular",
+    "vue": "Vue.js",
+    "tailwind": "Tailwind CSS",
+    "mysql_pg": "MySQL / PostgreSQL",
+    "mongodb": "MongoDB",
+    "sqlserver": "SQL Server",
+    "redis": "Redis",
+    "docker": "Docker",
+    "aws_azure": "AWS / Azure",
+    "cicd": "CI/CD & Git",
+    "vite_webpack": "Vite / Webpack",
+    "openai": "OpenAI",
+    "anthropic": "Anthropic",
+    "google": "Google Cloud",
+    "agents": "Agentes de IA"
+  },
+  "contact": {
+    "label": "Hablemos",
+    "title": "Contacto",
+    "subtitle": "¿Tienes un proyecto en mente o quieres modernizar tu infraestructura? Estoy listo para colaborar.",
+    "info": "Información de Contacto",
+    "email": "Email",
+    "phone": "Teléfono",
+    "location": "Ubicación",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto..."
+    },
+    "send": "Enviar Mensaje"
+  },
+  "footer": {
+    "copyright": "Todos los derechos reservados.",
+    "madeWith": "Hecho con",
+    "using": "usando React & Three.js"
+  }
+}

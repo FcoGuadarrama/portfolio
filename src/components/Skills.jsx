@@ -1,57 +1,59 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { FaLaravel, FaNodeJs, FaReact, FaAngular, FaVuejs, FaDocker, FaAws, FaGitAlt, FaBrain } from 'react-icons/fa';
 import { SiPhp, SiJavascript, SiTypescript, SiPostgresql, SiMysql, SiMongodb, SiRedis, SiTailwindcss, SiOpenai, SiAnthropic, SiGoogle } from 'react-icons/si';
 
 const skillCategories = [
     {
-        title: 'Backend Development',
+        titleKey: 'backend',
         skills: [
-            { name: 'PHP / Laravel', icon: <FaLaravel />, color: '#ff2d20' },
-            { name: 'Node.js', icon: <FaNodeJs />, color: '#339933' },
-            { name: 'CodeIgniter / Yii2', icon: <SiPhp />, color: '#777bb4' },
-            { name: 'C# / .NET', icon: <span style={{ fontWeight: '800' }}>C#</span>, color: '#239120' },
+            { nameKey: 'php', icon: <FaLaravel />, color: '#ff2d20' },
+            { nameKey: 'node', icon: <FaNodeJs />, color: '#339933' },
+            { nameKey: 'ci_yii', icon: <SiPhp />, color: '#777bb4' },
+            { nameKey: 'csharp', icon: <span style={{ fontWeight: '800' }}>C#</span>, color: '#239120' },
         ]
     },
     {
-        title: 'Frontend Frameworks',
+        titleKey: 'frontend',
         skills: [
-            { name: 'React', icon: <FaReact />, color: '#61dafb' },
-            { name: 'Angular', icon: <FaAngular />, color: '#dd0031' },
-            { name: 'Vue.js', icon: <FaVuejs />, color: '#4fc08d' },
-            { name: 'Tailwind CSS', icon: <SiTailwindcss />, color: '#06b6d4' },
+            { nameKey: 'react', icon: <FaReact />, color: '#61dafb' },
+            { nameKey: 'angular', icon: <FaAngular />, color: '#dd0031' },
+            { nameKey: 'vue', icon: <FaVuejs />, color: '#4fc08d' },
+            { nameKey: 'tailwind', icon: <SiTailwindcss />, color: '#06b6d4' },
         ]
     },
     {
-        title: 'Databases & Performance',
+        titleKey: 'databases',
         skills: [
-            { name: 'MySQL / PostgreSQL', icon: <SiMysql />, color: '#4479a1' },
-            { name: 'MongoDB', icon: <SiMongodb />, color: '#47a248' },
-            { name: 'SQL Server', icon: <SiPostgresql />, color: '#336791' },
-            { name: 'Redis', icon: <SiRedis />, color: '#dc382d' },
+            { nameKey: 'mysql_pg', icon: <SiMysql />, color: '#4479a1' },
+            { nameKey: 'mongodb', icon: <SiMongodb />, color: '#47a248' },
+            { nameKey: 'sqlserver', icon: <SiPostgresql />, color: '#336791' },
+            { nameKey: 'redis', icon: <SiRedis />, color: '#dc382d' },
         ]
     },
     {
-        title: 'DevOps & Tools',
+        titleKey: 'devops',
         skills: [
-            { name: 'Docker', icon: <FaDocker />, color: '#2496ed' },
-            { name: 'AWS / Azure', icon: <FaAws />, color: '#ff9900' },
-            { name: 'CI/CD / Actions', icon: <FaGitAlt />, color: '#f05032' },
-            { name: 'Vite / Webpack', icon: <SiJavascript />, color: '#f7df1e' },
+            { nameKey: 'docker', icon: <FaDocker />, color: '#2496ed' },
+            { nameKey: 'aws_azure', icon: <FaAws />, color: '#ff9900' },
+            { nameKey: 'cicd', icon: <FaGitAlt />, color: '#f05032' },
+            { nameKey: 'vite_webpack', icon: <SiJavascript />, color: '#f7df1e' },
         ]
     },
     {
-        title: 'IA & Desarrollo Moderno',
+        titleKey: 'ai',
         skills: [
-            { name: 'OpenAI (GPT-4o)', icon: <SiOpenai />, color: '#412991' },
-            { name: 'Anthropic (Claude)', icon: <SiAnthropic />, color: '#D97757' },
-            { name: 'Google (Gemini)', icon: <SiGoogle />, color: '#4285F4' },
-            { name: 'AI Agents / RAG', icon: <FaBrain />, color: '#FF69B4' },
+            { nameKey: 'openai', icon: <SiOpenai />, color: '#412991' },
+            { nameKey: 'anthropic', icon: <SiAnthropic />, color: '#D97757' },
+            { nameKey: 'google', icon: <SiGoogle />, color: '#4285F4' },
+            { nameKey: 'agents', icon: <FaBrain />, color: '#FF69B4' },
         ]
     }
 ];
 
 export default function Skills() {
+    const { t } = useTranslation();
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -75,10 +77,10 @@ export default function Skills() {
         <section id="skills" className="section" style={{ backgroundColor: 'var(--bg-secondary)' }}>
             <div className="container">
                 <div className="section-header">
-                    <span className="section-label">Mi Arsenal</span>
-                    <h2 className="section-title">Habilidades Técnicas</h2>
+                    <span className="section-label">{t('skills.label', 'Mi Arsenal')}</span>
+                    <h2 className="section-title">{t('skills.title')}</h2>
                     <p className="section-subtitle">
-                        Un conjunto de herramientas moderno y diversificado para construir el futuro de la web.
+                        {t('skills.subtitle', 'Un conjunto de herramientas moderno y diversificado para construir el futuro de la web.')}
                     </p>
                 </div>
 
@@ -92,7 +94,7 @@ export default function Skills() {
                     {skillCategories.map((category, idx) => (
                         <motion.div key={idx} variants={cardVariants} className="glass-card" style={{ height: '100%' }}>
                             <h3 style={{ fontSize: '1.25rem', fontWeight: '700', marginBottom: '24px', color: 'var(--text-primary)', borderBottom: '1px solid var(--border-color)', paddingBottom: '12px' }}>
-                                {category.title}
+                                {t(`skills.${category.titleKey}`)}
                             </h3>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                                 {category.skills.map((skill, sIdx) => (
@@ -112,7 +114,7 @@ export default function Skills() {
                                         </div>
                                         <div style={{ flex: 1 }}>
                                             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
-                                                <span style={{ fontSize: '0.95rem', fontWeight: '500' }}>{skill.name}</span>
+                                                <span style={{ fontSize: '0.95rem', fontWeight: '500' }}>{t(`skills.${skill.nameKey}`)}</span>
                                             </div>
                                             <div style={{ height: '4px', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '2px', overflow: 'hidden' }}>
                                                 <motion.div

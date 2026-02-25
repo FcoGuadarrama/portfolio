@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const navLinks = [
-    { name: 'Inicio', href: '#home' },
-    { name: 'Sobre Mí', href: '#about' },
-    { name: 'Habilidades', href: '#skills' },
-    { name: 'Experiencia', href: '#experience' },
-    { name: 'Proyectos', href: '#projects' },
-    { name: 'Contacto', href: '#contact' },
+    { key: 'about', href: '#about' },
+    { key: 'skills', href: '#skills' },
+    { key: 'experience', href: '#experience' },
+    { key: 'projects', href: '#projects' },
+    { key: 'contact', href: '#contact' },
 ];
 
 export default function Navbar() {
+    const { t, i18n } = useTranslation();
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [lang, setLang] = useState(i18n.language || 'en');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -23,6 +25,12 @@ export default function Navbar() {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const handleToggleLang = () => {
+        const newLang = lang === 'en' ? 'es' : 'en';
+        setLang(newLang);
+        i18n.changeLanguage(newLang);
+    };
 
     return (
         <nav className={`fixed top-0 left-0 w-full z-100 transition-all duration-300 ${scrolled ? 'bg-bg-glass backdrop-blur-md py-4 border-b border-border-color shadow-md' : 'bg-transparent py-6'}`} style={{
@@ -48,13 +56,13 @@ export default function Navbar() {
                 {/* Desktop Menu */}
                 <div className="hidden-mobile" style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
                     {navLinks.map((link) => (
-                        <a key={link.name} href={link.href} className="nav-link" style={{
+                        <a key={link.key} href={link.href} className="nav-link" style={{
                             fontSize: '0.9rem',
                             fontWeight: '500',
                             color: 'var(--text-secondary)',
                             transition: 'color 0.3s ease'
                         }} onMouseEnter={(e) => e.target.style.color = 'var(--accent-primary)'} onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}>
-                            {link.name}
+                            {t(`navbar.${link.key}`)}
                         </a>
                     ))}
                     <div style={{ width: '1px', height: '20px', backgroundColor: 'var(--border-color)', margin: '0 8px' }}></div>
@@ -66,6 +74,22 @@ export default function Navbar() {
                             <FaLinkedin />
                         </a>
                     </div>
+                    {/* Toggle Switch */}
+                    <button onClick={handleToggleLang} style={{
+                        marginLeft: '16px',
+                        background: '#222',
+                        border: '1px solid var(--border-color)',
+                        borderRadius: '16px',
+                        padding: '4px 12px',
+                        color: 'var(--accent-primary)',
+                        cursor: 'pointer',
+                        fontWeight: 'bold',
+                        fontSize: '0.9rem',
+                        outline: 'none',
+                        transition: 'background 0.2s'
+                    }}>
+                        {lang === 'en' ? 'EN' : 'ES'}
+                    </button>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -117,7 +141,7 @@ export default function Navbar() {
                         </button>
                         {navLinks.map((link) => (
                             <a
-                                key={link.name}
+                                key={link.key}
                                 href={link.href}
                                 onClick={() => setMobileMenuOpen(false)}
                                 style={{
@@ -126,9 +150,25 @@ export default function Navbar() {
                                     color: 'var(--text-primary)'
                                 }}
                             >
-                                {link.name}
+                                {t(`navbar.${link.key}`)}
                             </a>
                         ))}
+                        {/* Toggle Switch Mobile */}
+                        <button onClick={handleToggleLang} style={{
+                            marginTop: '16px',
+                            background: '#222',
+                            border: '1px solid var(--border-color)',
+                            borderRadius: '16px',
+                            padding: '4px 12px',
+                            color: 'var(--accent-primary)',
+                            cursor: 'pointer',
+                            fontWeight: 'bold',
+                            fontSize: '1rem',
+                            outline: 'none',
+                            transition: 'background 0.2s'
+                        }}>
+                            {lang === 'en' ? 'EN' : 'ES'}
+                        </button>
                         <div style={{ marginTop: 'auto', display: 'flex', gap: '24px' }}>
                             <FaGithub style={{ cursor: 'pointer', fontSize: '1.5rem' }} onClick={() => window.open('https://github.com/fcoguadarrama', '_blank')} />
                             <FaLinkedin style={{ cursor: 'pointer', fontSize: '1.5rem' }} onClick={() => window.open('https://linkedin.com/in/fcoguadarrama', '_blank')} />

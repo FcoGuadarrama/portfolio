@@ -1,4 +1,5 @@
 import React from 'react';
+import './i18n';
 import './App.css';
 import ParticleField from './components/ParticleField';
 import Navbar from './components/Navbar';

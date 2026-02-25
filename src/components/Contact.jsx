@@ -1,16 +1,18 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaPaperPlane } from 'react-icons/fa';
 
 export default function Contact() {
+    const { t } = useTranslation();
     return (
         <section id="contact" className="section">
             <div className="container">
                 <div className="section-header">
-                    <span className="section-label">Hablemos</span>
-                    <h2 className="section-title">Contáctame</h2>
+                    <span className="section-label">{t('contact.label', 'Hablemos')}</span>
+                    <h2 className="section-title">{t('contact.title')}</h2>
                     <p className="section-subtitle">
-                        ¿Tienes un proyecto en mente o quieres modernizar tu infraestructura? Estoy listo para colaborar.
+                        {t('contact.subtitle', '¿Tienes un proyecto en mente o quieres modernizar tu infraestructura? Estoy listo para colaborar.')}
                     </p>
                 </div>
 
@@ -23,13 +25,13 @@ export default function Contact() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h3 style={{ fontSize: '1.8rem', fontWeight: '700', marginBottom: '32px' }}>Información de <span style={{ color: 'var(--accent-primary)' }}>Contacto</span></h3>
+                        <h3 style={{ fontSize: '1.8rem', fontWeight: '700', marginBottom: '32px' }}>{t('contact.info', 'Información de')} <span style={{ color: 'var(--accent-primary)' }}>{t('contact.title')}</span></h3>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
                             <div className="glass-card" style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
                                 <div style={{ fontSize: '1.5rem', color: 'var(--accent-primary)' }}><FaEnvelope /></div>
                                 <div>
-                                    <h4 style={{ fontSize: '0.9rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Email</h4>
+                                    <h4 style={{ fontSize: '0.9rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>{t('contact.email', 'Email')}</h4>
                                     <a href="mailto:ingfranciscoguadarrama@gmail.com" style={{ fontSize: '1.1rem', fontWeight: '500', color: 'var(--text-primary)' }}>ingfranciscoguadarrama@gmail.com</a>
                                 </div>
                             </div>
@@ -37,7 +39,7 @@ export default function Contact() {
                             <div className="glass-card" style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
                                 <div style={{ fontSize: '1.5rem', color: 'var(--accent-secondary)' }}><FaPhone /></div>
                                 <div>
-                                    <h4 style={{ fontSize: '0.9rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Teléfono</h4>
+                                    <h4 style={{ fontSize: '0.9rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>{t('contact.phone', 'Teléfono')}</h4>
                                     <a href="tel:+522292436936" style={{ fontSize: '1.1rem', fontWeight: '500', color: 'var(--text-primary)' }}>+52 229 243 6936</a>
                                 </div>
                             </div>
@@ -45,7 +47,7 @@ export default function Contact() {
                             <div className="glass-card" style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
                                 <div style={{ fontSize: '1.5rem', color: 'var(--accent-tertiary)' }}><FaMapMarkerAlt /></div>
                                 <div>
-                                    <h4 style={{ fontSize: '0.9rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Ubicación</h4>
+                                    <h4 style={{ fontSize: '0.9rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>{t('contact.location', 'Ubicación')}</h4>
                                     <span style={{ fontSize: '1.1rem', fontWeight: '500', color: 'var(--text-primary)' }}>CDMX, México</span>
                                 </div>
                             </div>
@@ -68,8 +70,8 @@ export default function Contact() {
                             <form style={{ display: 'flex', flexDirection: 'column', gap: '24px' }} onSubmit={(e) => e.preventDefault()}>
                                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }} className="form-row">
                                     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                                        <label style={{ fontSize: '0.9rem', fontWeight: '600', color: 'var(--text-secondary)' }}>Nombre</label>
-                                        <input type="text" placeholder="Tu nombre" style={{
+                                        <label style={{ fontSize: '0.9rem', fontWeight: '600', color: 'var(--text-secondary)' }}>{t('contact.form.name', 'Nombre')}</label>
+                                        <input type="text" placeholder={t('contact.form.namePlaceholder', 'Tu nombre')} style={{
                                             backgroundColor: 'rgba(255,255,255,0.05)',
                                             border: '1px solid var(--border-color)',
                                             borderRadius: '8px',
@@ -79,8 +81,8 @@ export default function Contact() {
                                         }} onFocus={(e) => e.target.style.borderColor = 'var(--accent-primary)'} onBlur={(e) => e.target.style.borderColor = 'var(--border-color)'} />
                                     </div>
                                     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                                        <label style={{ fontSize: '0.9rem', fontWeight: '600', color: 'var(--text-secondary)' }}>Email</label>
-                                        <input type="email" placeholder="tu@email.com" style={{
+                                        <label style={{ fontSize: '0.9rem', fontWeight: '600', color: 'var(--text-secondary)' }}>{t('contact.form.email', 'Email')}</label>
+                                        <input type="email" placeholder={t('contact.form.emailPlaceholder', 'tu@email.com')} style={{
                                             backgroundColor: 'rgba(255,255,255,0.05)',
                                             border: '1px solid var(--border-color)',
                                             borderRadius: '8px',
@@ -92,8 +94,8 @@ export default function Contact() {
                                 </div>
 
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                                    <label style={{ fontSize: '0.9rem', fontWeight: '600', color: 'var(--text-secondary)' }}>Mensaje</label>
-                                    <textarea rows="5" placeholder="Cuéntame sobre tu proyecto..." style={{
+                                    <label style={{ fontSize: '0.9rem', fontWeight: '600', color: 'var(--text-secondary)' }}>{t('contact.form.message', 'Mensaje')}</label>
+                                    <textarea rows="5" placeholder={t('contact.form.messagePlaceholder', 'Cuéntame sobre tu proyecto...')} style={{
                                         backgroundColor: 'rgba(255,255,255,0.05)',
                                         border: '1px solid var(--border-color)',
                                         borderRadius: '8px',
@@ -105,7 +107,7 @@ export default function Contact() {
                                 </div>
 
                                 <button type="submit" className="btn btn-primary" style={{ marginTop: '12px', justifyContent: 'center' }}>
-                                    <FaPaperPlane /> Enviar Mensaje
+                                    <FaPaperPlane /> {t('contact.send', 'Enviar Mensaje')}
                                 </button>
                             </form>
                         </div>

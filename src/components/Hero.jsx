@@ -1,9 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { FaChevronDown, FaCode, FaRocket, FaLaravel } from 'react-icons/fa';
 import { SiJavascript, SiReact, SiTypescript } from 'react-icons/si';
 
 export default function Hero() {
+    const { t } = useTranslation();
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -35,7 +37,7 @@ export default function Hero() {
                     animate="visible"
                     style={{ maxWidth: '800px' }}
                 >
-                    <motion.span variants={itemVariants} className="section-label">Hola, mi nombre es</motion.span>
+                    <motion.span variants={itemVariants} className="section-label">{t('hero.greeting')}</motion.span>
 
                     <motion.h1 variants={itemVariants} style={{
                         fontSize: 'clamp(2.5rem, 8vw, 5rem)',
@@ -54,7 +56,7 @@ export default function Hero() {
                         marginBottom: '32px',
                         lineHeight: '1.2'
                     }}>
-                        Ingeniero Full-Stack especializado en <span style={{ color: 'var(--accent-primary)' }}>Laravel</span> y Ecosistemas Modernos.
+                        {t('hero.subtitle')}
                     </motion.h2>
 
                     <motion.p variants={itemVariants} style={{
@@ -63,15 +65,15 @@ export default function Hero() {
                         marginBottom: '48px',
                         maxWidth: '600px'
                     }}>
-                        +5 años transformando ideas en aplicaciones empresariales escalables y de alto rendimiento. Experto en PHP, Node.js y frameworks de frontend.
+                        {/* Puedes agregar más llaves de traducción aquí si lo deseas */}
                     </motion.p>
 
                     <motion.div variants={itemVariants} style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
                         <a href="#projects" className="btn btn-primary">
-                            <FaRocket /> Ver Proyectos
+                            <FaRocket /> {t('projects.title')}
                         </a>
                         <a href="#contact" className="btn btn-secondary">
-                            Contactar
+                            {t('contact.title')}
                         </a>
                     </motion.div>
                 </motion.div>
@@ -100,7 +102,7 @@ export default function Hero() {
                         color: 'var(--text-muted)'
                     }}
                 >
-                    <span style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '2px' }}>Scroll</span>
+                    <span style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '2px' }}>{'Scroll'}</span>
                     <motion.div
                         animate={{ y: [0, 10, 0] }}
                         transition={{ duration: 1.5, repeat: Infinity }}

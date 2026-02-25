@@ -1,43 +1,45 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 
 const experiences = [
     {
-        role: 'Full-Stack Web Developer',
+        roleKey: 'role1',
         company: 'CAPI Software',
-        period: 'Ago 2023 – Presente',
-        location: 'Remote',
-        description: 'Mantenimiento de CRM inmobiliario, resolución de bugs y modernización de código legacy. Refactorización a estándares actuales usando Laravel y Angular.',
+        periodKey: 'period1',
+        locationKey: 'remote',
+        descriptionKey: 'desc1',
         tech: ['Laravel', 'Angular', 'Node.js', 'TypeScript', 'Azure', 'CI/CD']
     },
     {
-        role: 'Full-Stack Web Developer',
+        roleKey: 'role2',
         company: 'One Way Consulting',
-        period: 'Ene 2023 – Ago 2023',
-        location: 'Remote',
-        description: 'Desarrollo de sistema POS con integración SAP Business One SDK. Evolución de base de código a versiones modernas de frameworks.',
+        periodKey: 'period2',
+        locationKey: 'remote',
+        descriptionKey: 'desc2',
         tech: ['Laravel', 'Angular', 'Yii2', 'Docker', 'AWS EC2', 'Vue.js', 'React']
     },
     {
-        role: 'Full-Stack Web Developer',
+        roleKey: 'role3',
         company: 'Narrative Studio',
-        period: 'Ago 2021 – Ene 2023',
-        location: 'Remote',
-        description: 'Desarrollo de dashboards ejecutivos y herramientas de reporte integradas con SAP. Containerización con Docker para flujos de despliegue.',
+        periodKey: 'period3',
+        locationKey: 'remote',
+        descriptionKey: 'desc3',
         tech: ['Laravel', 'React', 'Node.js', 'CodeIgniter', 'Docker', 'AWS Lambda']
     }
 ];
 
 export default function Experience() {
+    const { t } = useTranslation();
     return (
         <section id="experience" className="section">
             <div className="container">
                 <div className="section-header">
-                    <span className="section-label">Trayectoria</span>
-                    <h2 className="section-title">Experiencia Profesional</h2>
+                    <span className="section-label">{t('experience.label', 'Trayectoria')}</span>
+                    <h2 className="section-title">{t('experience.title')}</h2>
                     <p className="section-subtitle">
-                        Más de 5 años construyendo soluciones robustas para diversas industrias.
+                        {t('experience.subtitle', 'Más de 5 años construyendo soluciones robustas para diversas industrias.')}
                     </p>
                 </div>
 
@@ -80,7 +82,7 @@ export default function Experience() {
                                 <div className="glass-card" style={{ padding: '32px' }}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '16px', marginBottom: '16px' }}>
                                         <div>
-                                            <h3 style={{ fontSize: '1.4rem', fontWeight: '700', color: 'var(--text-primary)' }}>{exp.role}</h3>
+                                            <h3 style={{ fontSize: '1.4rem', fontWeight: '700', color: 'var(--text-primary)' }}>{t(`experience.${exp.roleKey}`)}</h3>
                                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--accent-primary)', fontWeight: '600', marginTop: '4px' }}>
                                                 <FaBriefcase fontSize="0.9rem" />
                                                 <span>{exp.company}</span>
@@ -89,23 +91,23 @@ export default function Experience() {
                                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px' }}>
                                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
                                                 <FaCalendarAlt />
-                                                <span>{exp.period}</span>
+                                                <span>{t(`experience.${exp.periodKey}`)}</span>
                                             </div>
                                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
                                                 <FaMapMarkerAlt />
-                                                <span>{exp.location}</span>
+                                                <span>{t(`experience.${exp.locationKey}`)}</span>
                                             </div>
                                         </div>
                                     </div>
 
                                     <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', lineHeight: '1.6' }}>
-                                        {exp.description}
+                                        {t(`experience.${exp.descriptionKey}`)}
                                     </p>
 
                                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
-                                        {exp.tech.map((t, tIdx) => (
+                                        {exp.tech.map((tch, tIdx) => (
                                             <span key={tIdx} className="tech-badge">
-                                                {t}
+                                                {tch}
                                             </span>
                                         ))}
                                     </div>

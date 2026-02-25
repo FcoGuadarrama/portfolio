@@ -1,9 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaHeart } from 'react-icons/fa';
 
 export default function Footer() {
+    const { t } = useTranslation();
     const currentYear = new Date().getFullYear();
-
     return (
         <footer style={{
             padding: '40px 0',
@@ -24,7 +25,7 @@ export default function Footer() {
                     </a>
 
                     <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-                        &copy; {currentYear} Francisco Guadarrama Coronado. Todos los derechos reservados.
+                        &copy; {currentYear} Francisco Guadarrama Coronado. {t('footer.copyright')}
                     </p>
 
                     <p style={{
@@ -34,7 +35,7 @@ export default function Footer() {
                         alignItems: 'center',
                         gap: '6px'
                     }}>
-                        Hecho con <FaHeart style={{ color: '#ff4d4d' }} /> usando React & Three.js
+                        {t('footer.madeWith', 'Hecho con')} <FaHeart style={{ color: '#ff4d4d' }} /> {t('footer.using', 'usando React & Three.js')}
                     </p>
                 </div>
             </div>
