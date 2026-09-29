@@ -100,8 +100,9 @@
       "organizationName": "Ministry of Finance and Public Credit (SHCP)",
       "summary": "Climate-financing supply and demand for adaptation and mitigation projects in Mexico.",
       "highlights": [
-        "Backend development in Laravel with REST APIs over MySQL.",
-        "Frontend development in Angular."
+        "Full-stack contribution, split evenly between backend and frontend.",
+        "Backend in Laravel with REST APIs over MySQL.",
+        "Frontend in React."
       ]
     },
     "project2": {

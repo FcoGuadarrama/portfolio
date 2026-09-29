@@ -9,7 +9,7 @@ import { STAGGER } from '../motion';
 const projects = [
     {
         key: 'project1',
-        tech: ['Laravel', 'Angular', 'MySQL', 'REST APIs'],
+        tech: ['Laravel', 'React', 'MySQL', 'REST APIs'],
         icon: <FaChartLine />
     },
     {

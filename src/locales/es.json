@@ -100,8 +100,9 @@
       "organizationName": "Secretaría de Hacienda y Crédito Público (SHCP)",
       "summary": "Oferta y demanda de financiamiento climático para proyectos de adaptación y mitigación en México.",
       "highlights": [
-        "Desarrollo del backend en Laravel con APIs REST sobre MySQL.",
-        "Desarrollo del frontend en Angular."
+        "Participación full stack, repartida en partes iguales entre backend y frontend.",
+        "Backend en Laravel con APIs REST sobre MySQL.",
+        "Frontend en React."
       ]
     },
     "project2": {
