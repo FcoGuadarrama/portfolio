@@ -4,116 +4,174 @@
     "skills": "Habilidades",
     "experience": "Experiencia",
     "projects": "Proyectos",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "menu": "Abrir menú",
+    "close": "Cerrar menú"
   },
   "hero": {
-    "greeting": "Hola, soy",
-    "subtitle": "Bienvenido a mi portafolio"
+    "role": "Ingeniero de software Full Stack",
+    "tagline": "Construyo aplicaciones web, integraciones y automatizaciones, desde la API hasta el dashboard.",
+    "ctaContact": "Hablemos",
+    "ctaWork": "Ver experiencia",
+    "mapCaption": "Integraciones que construyo en Templet.io (simplificado). Pasa el cursor o toca un nodo para ver su flujo.",
+    "map": {
+      "sources": "Fuente",
+      "tools": "Integración",
+      "results": "Resultado",
+      "python": "Python + IA",
+      "dashboard": "Dashboard de métricas",
+      "webinars": "Webinars",
+      "leads": "Leads enriquecidos"
+    }
   },
   "about": {
-    "label": "Conóceme",
     "title": "Sobre mí",
-    "subtitle": "Un desarrollador apasionado por crear soluciones robustas y elegantes.",
-    "innovation": "Impulsando la innovación a través del",
-    "code": "código",
-    "description1": "Soy Francisco Guadarrama, Ingeniero en Sistemas Computacionales con una trayectoria de más de 5 años en el desarrollo web full-stack. Mi enfoque se centra en la creación, mantenimiento y optimización de aplicaciones empresariales de gran escala.",
-    "description2": "Especializado en modernizar sistemas legacy y construir nuevas soluciones robustas, domino tanto el backend (Laravel, Node.js) como el frontend moderno (React, Angular). Me apasiona el código limpio, la escalabilidad y ayudar a los equipos a alcanzar objetivos tecnológicos ambiciosos.",
-    "stats": {
-      "years": "Años de experiencia",
-      "companies": "Empresas",
-      "projects": "Proyectos",
-      "technologies": "Tecnologías"
-    },
-    "backendExpert": "Experto Backend",
-    "backendStack": "Laravel, PHP, SQL",
-    "frontendSpecialist": "Especialista Frontend",
-    "frontendStack": "React, Vue, Tailwind",
-    "databaseCloud": "Base de datos y Nube",
-    "databaseStack": "MySQL, AWS, Docker"
+    "description1": "Soy Francisco Guadarrama, Ingeniero en Sistemas Computacionales con más de 5 años de experiencia desarrollando aplicaciones web y módulos desde cero. Mi experiencia abarca APIs, integración de sistemas, automatización, análisis de datos, entornos cloud y procesamiento de datos con IA.",
+    "description2": "Domino el backend (Laravel, Node.js, Python) y el frontend moderno (Angular, React, Vue). En mi trabajo diario utilizo desarrollo guiado por especificaciones (SDD), agentes de IA y Claude Code para entregar soluciones más rápido y con mayor calidad.",
+    "facts": {
+      "experience": {
+        "label": "Experiencia",
+        "value": "Más de 5 años en desarrollo full stack"
+      },
+      "focus": {
+        "label": "Enfoque",
+        "value": "Aplicaciones web, integraciones, automatización y datos"
+      },
+      "education": {
+        "label": "Formación",
+        "value": "Ingeniería en Sistemas Computacionales, Tecnológico Nacional de México (2015 – 2019)"
+      },
+      "location": {
+        "label": "Ubicación",
+        "value": "Ciudad de México"
+      }
+    }
   },
   "experience": {
-    "label": "Trayectoria",
     "title": "Experiencia",
-    "subtitle": "Más de 5 años desarrollando y optimizando aplicaciones empresariales.",
-    "role1": "Full-Stack Web Developer | CAPI Software",
-    "period1": "Ago 2023 - Presente",
-    "desc1": "Mantenimiento y modernización de un CRM inmobiliario, resolviendo incidencias y refactorizando código legacy con Laravel y Angular. Implementación de buenas prácticas actuales y desarrollo de un microservicio en Node.js para integración de leads con Meta. Trabajo con Azure y pipelines CI/CD.",
-    "role2": "Full-Stack Web Developer | One Way Consulting",
-    "period2": "Ene 2023 - Ago 2023",
-    "desc2": "Desarrollo de sistema punto de venta con integración al SDK de SAP Business One. Actualización del código a versiones modernas de frameworks y aplicación de mejores prácticas. Trabajo con Laravel, Angular, Yii2, Docker y servicios en AWS (EC2, S3).",
-    "role3": "Full-Stack Web Developer | Narrative Studio",
-    "period3": "Ago 2021 - Ene 2023",
-    "desc3": "Desarrollo de dashboards ejecutivos y herramientas de reporteo integradas con sistemas SAP. Backend con Laravel y Node.js, frontend con React. Implementación de contenedores Docker para flujos de despliegue.",
+    "jobs": {
+      "templet": {
+        "role": "Desarrollador Full Stack Sr.",
+        "period": "Oct 2025 - Presente",
+        "bullets": [
+          "Desarrollo plataformas internas de gestión de personal, incluida la administración de vacaciones.",
+          "Desarrollo un dashboard de métricas para un cliente: integro Salesforce mediante XL-Connector con Power BI y consulto los datos desde Laravel para visualizar indicadores y análisis.",
+          "Desarrollo una plataforma de registro y seguimiento de webinars con integración directa a la API de Zoom.",
+          "Creo flujos en Power Automate y Make e integro servicios como Clay, Zoom, Meta, GCP, Excel y Google Sheets.",
+          "Desarrollo scripts en Python para limpieza y enriquecimiento de leads mediante IA y aprendizaje automático."
+        ]
+      },
+      "capi": {
+        "role": "Ingeniero de software Full Stack",
+        "period": "Ago 2023 - Presente",
+        "bullets": [
+          "Desarrollo módulos desde cero y amplío funcionalidades de egresos, fianzas, facturación, ventas y configuración de CRM con Laravel y Angular.",
+          "Desarrollo dashboards, gráficos y funciones de análisis de datos para reportes de negocio.",
+          "Integro Meta y desarrollo funcionalidades para la gestión de leads y campañas."
+        ]
+      },
+      "oneway": {
+        "role": "Ingeniero de software",
+        "period": "Ene 2023 - Ago 2023",
+        "bullets": [
+          "Desarrollé y mantuve aplicaciones de negocio integradas con SAP Business One.",
+          "Modernicé aplicaciones existentes mediante actualización de frameworks, refactorización y mejoras de arquitectura."
+        ]
+      },
+      "narrative": {
+        "role": "Ingeniero de software",
+        "period": "Ago 2021 - Ene 2023",
+        "bullets": [
+          "Desarrollé aplicaciones de reportes y análisis integradas con SAP, con servicios backend y funcionalidades frontend.",
+          "Implementé contenedores Docker y mantuve flujos de despliegue para distintos proyectos."
+        ]
+      }
+    },
     "remote": "Remoto"
   },
   "projects": {
-    "label": "Portafolio",
     "title": "Proyectos",
-    "subtitle": "Proyectos desarrollados para dependencias federales en materia climática.",
+    "subtitle": "Proyectos para dependencias federales en materia climática. Abre cada uno para ver el detalle.",
     "project1": {
       "title": "Plataforma Nacional de Financiamiento Climático",
       "organization": "SHCP",
       "period": "Nov 2020 - Jun 2021",
-      "description": "Participación en el desarrollo de una herramienta web para identificar oferta y demanda de financiamiento climático orientado a programas de adaptación y mitigación en México, alineados al cumplimiento del Acuerdo de París. Tecnologías: Laravel, Angular, MySQL, APIs REST."
+      "description": "Colaboré en una plataforma web para identificar la oferta y demanda de financiamiento climático para proyectos de adaptación y mitigación en México, en apoyo a los objetivos del Acuerdo de París.",
+      "organizationName": "Secretaría de Hacienda y Crédito Público (SHCP)",
+      "summary": "Oferta y demanda de financiamiento climático para proyectos de adaptación y mitigación en México.",
+      "highlights": [
+        "Desarrollo del backend en Laravel con APIs REST sobre MySQL.",
+        "Desarrollo del frontend en Angular."
+      ]
     },
     "project2": {
-      "title": "Sistema para Identificación y Cuantificación de Acciones Climáticas",
+      "title": "Herramienta de reporte de acciones climáticas",
       "organization": "SEMARNAT",
-      "period": "Jan 2020 - Oct 2020",
-      "description": "Participación en el desarrollo de un sistema para la integración del Anexo Transversal de Cambio Climático. Backend en Laravel y frontend en Angular. Manejo de grandes volúmenes de datos, fórmulas complejas y validaciones avanzadas. Publicado en el Diario Oficial de la Federación (siatsubnacional.semarnat.gob.mx)."
-    }
+      "period": "Ene 2020 - Oct 2020",
+      "description": "Colaboré en una herramienta para identificar y cuantificar acciones climáticas en reportes gubernamentales. Trabajé con grandes conjuntos de datos, cálculos matemáticos, validaciones complejas y estructuración de datos.",
+      "organizationName": "Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT)",
+      "summary": "Identificación y cuantificación de acciones climáticas para reportes de gobierno.",
+      "highlights": [
+        "Procesamiento de grandes conjuntos de datos y cálculos matemáticos para cuantificar acciones climáticas.",
+        "Validaciones complejas de formularios y estructuración de datos.",
+        "Backend en Laravel, frontend en Vue.js, datos en MongoDB y entorno con Docker."
+      ]
+    },
+    "visit": "Visitar sitio",
+    "details": "Ver detalle",
+    "contribution": "Mi participación",
+    "stack": "Tecnologías",
+    "close": "Cerrar"
   },
   "skills": {
-    "label": "Mi Arsenal",
     "title": "Habilidades",
-    "subtitle": "Un conjunto de herramientas moderno y diversificado para construir el futuro de la web.",
+    "subtitle": "Las herramientas con las que trabajo a diario, del backend a la automatización.",
     "backend": "Backend",
     "frontend": "Frontend",
     "databases": "Bases de datos",
     "devops": "DevOps",
     "ai": "IA y Agentes",
-    "php": "PHP / Laravel / Yii2 / C#",
+    "php": "PHP / Laravel / Yii2 / CodeIgniter",
     "node": "Node.js",
-    "ci_yii": "CodeIgniter / Yii2",
-    "csharp": "C#",
     "react": "React.js",
     "angular": "Angular",
     "vue": "Vue.js",
     "tailwind": "Tailwind CSS",
     "mysql_pg": "MySQL / PostgreSQL",
     "mongodb": "MongoDB",
-    "sqlserver": "SQL Server",
+    "sqlserver": "SQL Server / SQLite",
     "redis": "Redis",
     "docker": "Docker",
-    "aws_azure": "AWS / Azure",
-    "cicd": "CI/CD & Git",
+    "aws_azure": "Azure / AWS",
+    "cicd": "CI/CD / GitHub Actions",
     "vite_webpack": "Vite / Webpack",
-    "openai": "OpenAI",
-    "anthropic": "Anthropic",
-    "google": "Google Cloud",
-    "agents": "Agentes de IA"
+    "agents": "Agentes de IA",
+    "automation": "Automatización y Datos",
+    "python": "Python / FastAPI",
+    "rest": "APIs REST",
+    "typescript": "JavaScript / TypeScript",
+    "gcp": "Google Cloud (GCP)",
+    "powerbi": "Power BI",
+    "make": "Make",
+    "power_automate": "Power Automate",
+    "entra": "Microsoft Entra ID",
+    "claude_code": "Claude Code",
+    "sdd": "Desarrollo guiado por especificaciones (SDD)",
+    "ml": "Procesamiento de datos con IA / ML"
   },
   "contact": {
-    "label": "Hablemos",
     "title": "Contacto",
-    "subtitle": "¿Tienes un proyecto en mente o quieres modernizar tu infraestructura? Estoy listo para colaborar.",
-    "info": "Información de Contacto",
+    "subtitle": "¿Tienes un proyecto en mente o una integración por resolver? Escríbeme.",
     "email": "Email",
     "phone": "Teléfono",
     "location": "Ubicación",
-    "form": {
-      "name": "Nombre",
-      "namePlaceholder": "Tu nombre",
-      "email": "Email",
-      "emailPlaceholder": "tu@email.com",
-      "message": "Mensaje",
-      "messagePlaceholder": "Cuéntame sobre tu proyecto..."
-    },
-    "send": "Enviar Mensaje"
+    "send": "Enviar correo",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "locationValue": "Ciudad de México, México"
   },
   "footer": {
     "copyright": "Todos los derechos reservados.",
-    "madeWith": "Hecho con",
-    "using": "usando React & Three.js"
+    "madeWith": "Hecho con React y Framer Motion."
   }
 }

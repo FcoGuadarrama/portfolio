@@ -15,4 +15,9 @@ i18n
     interpolation: { escapeValue: false },
   });
 
+i18n.on('languageChanged', (lng) => {
+  document.documentElement.lang = lng;
+});
+document.documentElement.lang = i18n.language;
+
 export default i18n;

@@ -4,116 +4,174 @@
     "skills": "Skills",
     "experience": "Experience",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "menu": "Open menu",
+    "close": "Close menu"
   },
   "hero": {
-    "greeting": "Hello, I'm",
-    "subtitle": "Welcome to my portfolio"
+    "role": "Full-Stack Software Engineer",
+    "tagline": "I build web applications, integrations, and automations, from the API to the dashboard.",
+    "ctaContact": "Let's talk",
+    "ctaWork": "See my experience",
+    "mapCaption": "Integrations I build at Templet.io (simplified). Hover or tap a node to trace its flow.",
+    "map": {
+      "sources": "Source",
+      "tools": "Integration",
+      "results": "Result",
+      "python": "Python + AI",
+      "dashboard": "Metrics dashboard",
+      "webinars": "Webinars",
+      "leads": "Enriched leads"
+    }
   },
   "about": {
-    "label": "Get to know me",
     "title": "About Me",
-    "subtitle": "A developer passionate about creating robust and elegant solutions.",
-    "innovation": "Driving innovation through",
-    "code": "code",
-    "description1": "I'm Francisco Guadarrama, a Computer Systems Engineer with over 5 years of experience in full-stack web development. My focus is on creating, maintaining, and optimizing large-scale enterprise applications.",
-    "description2": "Specialized in modernizing legacy systems and building new robust solutions, I master both backend (Laravel, Node.js) and modern frontend (React, Angular). I'm passionate about clean code, scalability, and helping teams achieve ambitious tech goals.",
-    "stats": {
-      "years": "Years of Experience",
-      "companies": "Companies",
-      "projects": "Projects",
-      "technologies": "Technologies"
-    },
-    "backendExpert": "Backend Expert",
-    "backendStack": "Laravel, PHP, SQL",
-    "frontendSpecialist": "Frontend Specialist",
-    "frontendStack": "React, Vue, Tailwind",
-    "databaseCloud": "Database & Cloud",
-    "databaseStack": "MySQL, AWS, Docker"
+    "description1": "I'm Francisco Guadarrama, a Computer Systems Engineer with 5+ years of experience building web applications and modules from scratch. My experience spans APIs, system integrations, workflow automation, analytics, cloud environments, and AI-assisted data processing.",
+    "description2": "I work across the backend (Laravel, Node.js, Python) and modern frontend (Angular, React, Vue). In my day-to-day work I use Specification-Driven Development (SDD), agentic AI workflows, and Claude Code to ship faster with higher quality.",
+    "facts": {
+      "experience": {
+        "label": "Experience",
+        "value": "5+ years in full-stack development"
+      },
+      "focus": {
+        "label": "Focus",
+        "value": "Web applications, integrations, automation, and data"
+      },
+      "education": {
+        "label": "Education",
+        "value": "Computer Systems Engineering, Technological Institute of Mexico (2015 – 2019)"
+      },
+      "location": {
+        "label": "Location",
+        "value": "Mexico City"
+      }
+    }
   },
   "experience": {
-    "label": "Trajectory",
     "title": "Experience",
-    "subtitle": "Over 5 years building and optimizing enterprise applications.",
-    "role1": "Full-Stack Web Developer | CAPI Software",
-    "period1": "Aug 2023 - Present",
-    "desc1": "Maintaining and modernizing a real estate CRM system, resolving bugs and refactoring legacy code using Laravel and Angular. Implemented modern best practices and built a Node.js microservice for Meta lead capture integration. Working with Azure and CI/CD pipelines.",
-    "role2": "Full-Stack Web Developer | One Way Consulting",
-    "period2": "Jan 2023 - Aug 2023",
-    "desc2": "Developed a point-of-sale system integrated with the SAP Business One SDK. Upgraded legacy code to modern framework versions and applied best practices. Worked with Laravel, Angular, Yii2, Docker, and AWS services (EC2, S3).",
-    "role3": "Full-Stack Web Developer | Narrative Studio",
-    "period3": "Aug 2021 - Jan 2023",
-    "desc3": "Developed executive dashboards and reporting tools integrated with SAP systems. Backend development with Laravel and Node.js, frontend with React. Implemented Docker containerization for deployment workflows.",
+    "jobs": {
+      "templet": {
+        "role": "Senior Full-Stack Developer",
+        "period": "Oct 2025 - Present",
+        "bullets": [
+          "Build internal personnel management platforms, including employee leave management.",
+          "Develop a client metrics dashboard: integrate Salesforce data through XL-Connector into Power BI, then query Power BI from Laravel to display metrics and analysis.",
+          "Build a webinar registration and tracking platform integrated directly with the Zoom API.",
+          "Create Power Automate and Make workflows; connect services including Clay, Zoom, Meta, GCP, Excel, and Google Sheets.",
+          "Write Python scripts for lead data cleaning and enrichment using AI and machine learning."
+        ]
+      },
+      "capi": {
+        "role": "Full-Stack Software Engineer",
+        "period": "Aug 2023 - Present",
+        "bullets": [
+          "Build modules from scratch and extend existing functionality for expense management, surety bonds, invoicing, sales, and CRM configuration using Laravel and Angular.",
+          "Develop dashboards, charts, and data analysis features to support business reporting.",
+          "Integrate Meta and develop functionality for lead and campaign management."
+        ]
+      },
+      "oneway": {
+        "role": "Software Engineer",
+        "period": "Jan 2023 - Aug 2023",
+        "bullets": [
+          "Developed and maintained business applications integrated with SAP Business One.",
+          "Modernized legacy applications through framework upgrades, code refactoring, and architectural improvements."
+        ]
+      },
+      "narrative": {
+        "role": "Software Engineer",
+        "period": "Aug 2021 - Jan 2023",
+        "bullets": [
+          "Developed reporting and analytics applications integrated with SAP systems, contributing backend services and frontend functionality.",
+          "Implemented Docker containerization and maintained deployment workflows across multiple projects."
+        ]
+      }
+    },
     "remote": "Remote"
   },
   "projects": {
-    "label": "Portfolio",
     "title": "Projects",
-    "subtitle": "Projects developed for federal institutions in climate-related initiatives.",
+    "subtitle": "Projects for Mexican federal agencies on climate policy. Open each one for details.",
     "project1": {
       "title": "National Climate Financing Platform",
       "organization": "SHCP",
       "period": "Nov 2020 - Jun 2021",
-      "description": "Contributed to the development of a web-based tool to identify supply and demand for climate financing supporting adaptation and mitigation programs in Mexico, aligned with the Paris Agreement. Technologies: Laravel, Angular, MySQL, REST APIs."
+      "description": "Co-developed a web platform to identify climate-financing supply and demand for adaptation and mitigation projects in Mexico, supporting the country's Paris Agreement goals.",
+      "organizationName": "Ministry of Finance and Public Credit (SHCP)",
+      "summary": "Climate-financing supply and demand for adaptation and mitigation projects in Mexico.",
+      "highlights": [
+        "Backend development in Laravel with REST APIs over MySQL.",
+        "Frontend development in Angular."
+      ]
     },
     "project2": {
-      "title": "Climate Action Identification and Quantification System",
+      "title": "Climate Action Reporting Tool",
       "organization": "SEMARNAT",
       "period": "Jan 2020 - Oct 2020",
-      "description": "Contributed to the development of a system for the integration of the Climate Change Cross-Cutting Annex. Backend built in Laravel and frontend in Angular. Addressed large datasets, complex mathematical formulas, and advanced validation logic. Published in the Official Gazette of the Federation (siatsubnacional.semarnat.gob.mx)."
-    }
+      "description": "Co-developed a tool to identify and quantify climate-related actions for government reporting. Worked on large datasets, mathematical calculations, complex form validation, and data structuring.",
+      "organizationName": "Ministry of Environment and Natural Resources (SEMARNAT)",
+      "summary": "Identifying and quantifying climate actions for government reporting.",
+      "highlights": [
+        "Processed large datasets and mathematical calculations to quantify climate actions.",
+        "Built complex form validation and data structuring.",
+        "Laravel backend, Vue.js frontend, MongoDB data layer, and a Docker environment."
+      ]
+    },
+    "visit": "Visit site",
+    "details": "View details",
+    "contribution": "My contribution",
+    "stack": "Stack",
+    "close": "Close"
   },
   "skills": {
-    "label": "My Arsenal",
     "title": "Skills",
-    "subtitle": "A modern and diverse toolkit to build the future of the web.",
+    "subtitle": "The tools I work with every day, from backend to automation.",
     "backend": "Backend",
     "frontend": "Frontend",
     "databases": "Databases",
     "devops": "DevOps",
     "ai": "AI & Agents",
-    "php": "PHP / Laravel / Yii2 / C#",
+    "php": "PHP / Laravel / Yii2 / CodeIgniter",
     "node": "Node.js",
-    "ci_yii": "CodeIgniter / Yii2",
-    "csharp": "C#",
     "react": "React.js",
     "angular": "Angular",
     "vue": "Vue.js",
     "tailwind": "Tailwind CSS",
     "mysql_pg": "MySQL / PostgreSQL",
     "mongodb": "MongoDB",
-    "sqlserver": "SQL Server",
+    "sqlserver": "SQL Server / SQLite",
     "redis": "Redis",
     "docker": "Docker",
-    "aws_azure": "AWS / Azure",
-    "cicd": "CI/CD & Git",
+    "aws_azure": "Azure / AWS",
+    "cicd": "CI/CD / GitHub Actions",
     "vite_webpack": "Vite / Webpack",
-    "openai": "OpenAI",
-    "anthropic": "Anthropic",
-    "google": "Google Cloud",
-    "agents": "AI Agents"
+    "agents": "AI Agents",
+    "automation": "Automation & Data",
+    "python": "Python / FastAPI",
+    "rest": "REST APIs",
+    "typescript": "JavaScript / TypeScript",
+    "gcp": "Google Cloud (GCP)",
+    "powerbi": "Power BI",
+    "make": "Make",
+    "power_automate": "Power Automate",
+    "entra": "Microsoft Entra ID",
+    "claude_code": "Claude Code",
+    "sdd": "Specification-Driven Development (SDD)",
+    "ml": "AI / ML data processing"
   },
   "contact": {
-    "label": "Let's Talk",
     "title": "Contact",
-    "subtitle": "Do you have a project in mind or want to modernize your infrastructure? I'm ready to collaborate.",
-    "info": "Contact Information",
+    "subtitle": "Have a project in mind or an integration to solve? Get in touch.",
     "email": "Email",
     "phone": "Phone",
     "location": "Location",
-    "form": {
-      "name": "Name",
-      "namePlaceholder": "Your name",
-      "email": "Email",
-      "emailPlaceholder": "your@email.com",
-      "message": "Message",
-      "messagePlaceholder": "Tell me about your project..."
-    },
-    "send": "Send Message"
+    "send": "Send an email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "locationValue": "Mexico City, Mexico"
   },
   "footer": {
     "copyright": "All rights reserved.",
-    "madeWith": "Made with",
-    "using": "using React & Three.js"
+    "madeWith": "Built with React and Framer Motion."
   }
 }

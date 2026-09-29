@@ -1,137 +1,94 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
-import { FaLaravel, FaNodeJs, FaReact, FaAngular, FaVuejs, FaDocker, FaAws, FaGitAlt, FaBrain } from 'react-icons/fa';
-import { SiPhp, SiJavascript, SiTypescript, SiPostgresql, SiMysql, SiMongodb, SiRedis, SiTailwindcss, SiOpenai, SiAnthropic, SiGoogle } from 'react-icons/si';
+import Reveal from './Reveal';
+import { STAGGER } from '../motion';
+import { FaLaravel, FaNodeJs, FaReact, FaAngular, FaVuejs, FaDocker, FaAws, FaBrain, FaMicrosoft, FaChartBar, FaCogs, FaFileAlt, FaDatabase, FaExchangeAlt } from 'react-icons/fa';
+import { SiPython, SiTypescript, SiPostgresql, SiMongodb, SiRedis, SiTailwindcss, SiClaude, SiGooglecloud, SiGithubactions, SiVite, SiMake } from 'react-icons/si';
 
 const skillCategories = [
     {
         titleKey: 'backend',
         skills: [
-            { nameKey: 'php', icon: <FaLaravel />, color: '#ff2d20' },
-            { nameKey: 'node', icon: <FaNodeJs />, color: '#339933' },
-            { nameKey: 'ci_yii', icon: <SiPhp />, color: '#777bb4' },
-            { nameKey: 'csharp', icon: <span style={{ fontWeight: '800' }}>C#</span>, color: '#239120' },
+            { nameKey: 'php', icon: <FaLaravel /> },
+            { nameKey: 'node', icon: <FaNodeJs /> },
+            { nameKey: 'python', icon: <SiPython /> },
+            { nameKey: 'rest', icon: <FaExchangeAlt /> },
         ]
     },
     {
         titleKey: 'frontend',
         skills: [
-            { nameKey: 'react', icon: <FaReact />, color: '#61dafb' },
-            { nameKey: 'angular', icon: <FaAngular />, color: '#dd0031' },
-            { nameKey: 'vue', icon: <FaVuejs />, color: '#4fc08d' },
-            { nameKey: 'tailwind', icon: <SiTailwindcss />, color: '#06b6d4' },
+            { nameKey: 'typescript', icon: <SiTypescript /> },
+            { nameKey: 'angular', icon: <FaAngular /> },
+            { nameKey: 'react', icon: <FaReact /> },
+            { nameKey: 'vue', icon: <FaVuejs /> },
+            { nameKey: 'tailwind', icon: <SiTailwindcss /> },
         ]
     },
     {
         titleKey: 'databases',
         skills: [
-            { nameKey: 'mysql_pg', icon: <SiMysql />, color: '#4479a1' },
-            { nameKey: 'mongodb', icon: <SiMongodb />, color: '#47a248' },
-            { nameKey: 'sqlserver', icon: <SiPostgresql />, color: '#336791' },
-            { nameKey: 'redis', icon: <SiRedis />, color: '#dc382d' },
+            { nameKey: 'mysql_pg', icon: <SiPostgresql /> },
+            { nameKey: 'sqlserver', icon: <FaDatabase /> },
+            { nameKey: 'mongodb', icon: <SiMongodb /> },
+            { nameKey: 'redis', icon: <SiRedis /> },
         ]
     },
     {
         titleKey: 'devops',
         skills: [
-            { nameKey: 'docker', icon: <FaDocker />, color: '#2496ed' },
-            { nameKey: 'aws_azure', icon: <FaAws />, color: '#ff9900' },
-            { nameKey: 'cicd', icon: <FaGitAlt />, color: '#f05032' },
-            { nameKey: 'vite_webpack', icon: <SiJavascript />, color: '#f7df1e' },
+            { nameKey: 'aws_azure', icon: <FaAws /> },
+            { nameKey: 'gcp', icon: <SiGooglecloud /> },
+            { nameKey: 'docker', icon: <FaDocker /> },
+            { nameKey: 'cicd', icon: <SiGithubactions /> },
+            { nameKey: 'vite_webpack', icon: <SiVite /> },
+        ]
+    },
+    {
+        titleKey: 'automation',
+        skills: [
+            { nameKey: 'powerbi', icon: <FaChartBar /> },
+            { nameKey: 'make', icon: <SiMake /> },
+            { nameKey: 'power_automate', icon: <FaCogs /> },
+            { nameKey: 'entra', icon: <FaMicrosoft /> },
         ]
     },
     {
         titleKey: 'ai',
         skills: [
-            { nameKey: 'openai', icon: <SiOpenai />, color: '#412991' },
-            { nameKey: 'anthropic', icon: <SiAnthropic />, color: '#D97757' },
-            { nameKey: 'google', icon: <SiGoogle />, color: '#4285F4' },
-            { nameKey: 'agents', icon: <FaBrain />, color: '#FF69B4' },
+            { nameKey: 'claude_code', icon: <SiClaude /> },
+            { nameKey: 'agents', icon: <FaBrain /> },
+            { nameKey: 'sdd', icon: <FaFileAlt /> },
+            { nameKey: 'ml', icon: <SiPython /> },
         ]
     }
 ];
 
 export default function Skills() {
     const { t } = useTranslation();
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-            },
-        },
-    };
-
-    const cardVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.5 },
-        },
-    };
-
     return (
-        <section id="skills" className="section" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+        <section id="skills" className="section section-alt">
             <div className="container">
-                <div className="section-header">
-                    <span className="section-label">{t('skills.label', 'Mi Arsenal')}</span>
+                <Reveal className="section-header">
                     <h2 className="section-title">{t('skills.title')}</h2>
-                    <p className="section-subtitle">
-                        {t('skills.subtitle', 'Un conjunto de herramientas moderno y diversificado para construir el futuro de la web.')}
-                    </p>
-                </div>
+                    <p className="section-subtitle">{t('skills.subtitle')}</p>
+                </Reveal>
 
-                <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '32px' }}
-                >
+                <div className="skills-grid">
                     {skillCategories.map((category, idx) => (
-                        <motion.div key={idx} variants={cardVariants} className="glass-card" style={{ height: '100%' }}>
-                            <h3 style={{ fontSize: '1.25rem', fontWeight: '700', marginBottom: '24px', color: 'var(--text-primary)', borderBottom: '1px solid var(--border-color)', paddingBottom: '12px' }}>
-                                {t(`skills.${category.titleKey}`)}
-                            </h3>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                                {category.skills.map((skill, sIdx) => (
-                                    <div key={sIdx} style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                                        <div style={{
-                                            fontSize: '1.5rem',
-                                            color: skill.color,
-                                            width: '40px',
-                                            height: '40px',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            backgroundColor: 'rgba(255,255,255,0.03)',
-                                            borderRadius: '8px'
-                                        }}>
-                                            {skill.icon}
-                                        </div>
-                                        <div style={{ flex: 1 }}>
-                                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
-                                                <span style={{ fontSize: '0.95rem', fontWeight: '500' }}>{t(`skills.${skill.nameKey}`)}</span>
-                                            </div>
-                                            <div style={{ height: '4px', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '2px', overflow: 'hidden' }}>
-                                                <motion.div
-                                                    initial={{ width: 0 }}
-                                                    whileInView={{ width: '100%' }}
-                                                    viewport={{ once: true }}
-                                                    transition={{ duration: 1.5, delay: 0.5 + (sIdx * 0.1) }}
-                                                    style={{ height: '100%', background: `linear-gradient(90deg, ${skill.color}, var(--accent-primary))` }}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
+                        <Reveal key={category.titleKey} delay={STAGGER * (idx % 3)} className="skill-group">
+                            <h3>{t(`skills.${category.titleKey}`)}</h3>
+                            <ul>
+                                {category.skills.map((skill) => (
+                                    <li key={skill.nameKey}>
+                                        <span className="skill-icon" aria-hidden="true">{skill.icon}</span>
+                                        {t(`skills.${skill.nameKey}`)}
+                                    </li>
                                 ))}
-                            </div>
-                        </motion.div>
+                            </ul>
+                        </Reveal>
                     ))}
-                </motion.div>
+                </div>
             </div>
         </section>
     );
